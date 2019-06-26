@@ -28,3 +28,12 @@
 		}
 		return Date("Y.m.d H:i:s", $cdate);
 	}
+	
+	# copy default to release
+	function checkOrInitDB()
+	{
+	    if( !file_exists(DB_NAME))
+	    {
+	        rename(DB_NAME . '.default', DB_NAME);
+	    }
+	}

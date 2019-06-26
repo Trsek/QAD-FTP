@@ -18,7 +18,10 @@ if(IsSet($_REQUEST["XDEBUG_SESSION_START"]))
 session_start();
 require_once("php/config.php");
 require_once("php/db/mte/mte.php");
-	
+
+# test DB
+checkOrInitDB();
+
 # autorefresh
 if( isset($_REQUEST['autorefresh'])) {
 	header("Refresh: 7; URL=". $_SERVER['REQUEST_URI']);
