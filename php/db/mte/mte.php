@@ -302,7 +302,7 @@ class MySQLtabledit {
 		if( $this->values == false )
 			$this->values = null;
 
-		if (count($this->values)>0) {
+		if ($this->values != null) {
 			$count = 0;
 			foreach ($this->values as $rij) {
 				$count++;

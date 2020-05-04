@@ -1,7 +1,12 @@
 <?php
 	# db filename
-	define(DB_NAME,      "php/data/data.sqlite");
-	define(WEB_DISABLE_RESET, "sekerak.eu");
+	define('DB_NAME',      "php/data/data.sqlite");
+	define('WEB_DISABLE_RESET', "sekerak.eu");
+
+    define('INTEGER', 'INTEGER');
+    define('DATETIME', 'DATETIME');
+    define('DATE', 'DATE');
+    define('TIME', 'TIME');
 
 	date_default_timezone_set('Europe/Prague');
 	

@@ -20,8 +20,9 @@ $where = stripslashes($_REQUEST['graphw']);
 $db = new PDO('sqlite:../'. DB_NAME);
 $values = $db->query("SELECT PHPDateTime, $column FROM $table $where ORDER BY PHPDateTime");
 
+$xdata = array();
 $ydata = array();
-if (count($values)>0) {
+if ($values != null) {
 	foreach ($values as $rij) {
 		if( is_numeric($rij[$column])) {
 			$xdata[] = $rij['PHPDateTime'];
